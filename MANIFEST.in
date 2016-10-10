@@ -1,0 +1,2 @@
+graft webstr
+global-exclude *.py[cod] __pycache__ .gitignore *.html
