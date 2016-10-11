@@ -12,18 +12,18 @@ from raut.lib.selenium.ui.patternfly.models import modal as m_modal
 
 
 class ModalWindow(PageObject):
-  """
-  Base page object class for any modal window.
-  """
-  _model = m_modal.ModalWindow
-  _required_elems = ['header', 'body', 'footer', 'title', 'close_btn']
-
-  def close(self):
     """
-    Close the modal windown via default close button in the deader
-    (a button labeled "X" in the top right corner).
+    Base page object class for any modal window.
     """
-    self._model.close_btn.click()
+    _model = m_modal.ModalWindow
+    _required_elems = ['header', 'body', 'footer', 'title', 'close_btn']
 
-  def get_title(self):
-    return self._model.title.text
+    def close(self):
+        """
+        Close the modal windown via default close button in the deader
+        (a button labeled "X" in the top right corner).
+        """
+        self._model.close_btn.click()
+
+    def get_title(self):
+        return self._model.title.text

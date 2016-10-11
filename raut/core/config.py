@@ -24,12 +24,12 @@ BROWSER_HEIGHT = 1024
 
 
 def update_value(key_name, value, force=False):
-  """
-  Update single value of this config module.
-  """
-  this_module = sys.modules[__name__]
-  key_name = key_name.upper()
-  # raise AttributeError if we try to define new value (unless force is used)
-  if not force:
-    getattr(this_module, key_name)
-  setattr(this_module, key_name, value)
+    """
+    Update single value of this config module.
+    """
+    this_module = sys.modules[__name__]
+    key_name = key_name.upper()
+    # raise AttributeError if we try to define new value (unless force is used)
+    if not force:
+        getattr(this_module, key_name)
+    setattr(this_module, key_name, value)

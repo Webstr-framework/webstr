@@ -10,8 +10,8 @@ from raut.lib.selenium.ui.common.models import form
 
 
 class ActionPopupPanel(PageModel):
-  """ Base Action Pop Up Panel model """
-  _root = RootPageElement(By.CLASS_NAME, "actionPanelPopupPanel")
+    """ Base Action Pop Up Panel model """
+    _root = RootPageElement(By.CLASS_NAME, "actionPanelPopupPanel")
 
-  status_btn = form.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Status")]')
-  stop_btn = form.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Stop")]')
+    status_btn = form.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Status")]')
+    stop_btn = form.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Stop")]')
