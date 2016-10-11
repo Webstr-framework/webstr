@@ -68,7 +68,7 @@ class PageModel(PageModelBase):
         super().__init__(driver)
 
 
-class DynamicPageModel(PageModelBase, metaclass=ABCMeta):
+class DynamicPageModel(PageModelBase):
     """
     Dynamic page model.
 
@@ -77,6 +77,7 @@ class DynamicPageModel(PageModelBase, metaclass=ABCMeta):
     whose return value is used for string interpolation of locators
     of all dynamic elements.
     """
+    __metaclass__ = ABCMeta
 
     def __init__(self, driver, name):
         """
@@ -109,11 +110,12 @@ class DynamicPageModel(PageModelBase, metaclass=ABCMeta):
         """
 
 
-class BasePageElement(object, metaclass=ABCMeta):
+class BasePageElement(object):
     """
     *Property* of a page model representing a page element.
     This class is not meant to be used as it is
     """
+    __metaclass__ = ABCMeta
 
     def __init__(self, by, locator):
         """ Init.
@@ -318,10 +320,11 @@ class DynamicPageElement(PageElement):
         super().__init__(by=by, locator=locator, as_list=False)
 
 
-class BaseWebElementHelper(FreshWebElement, metaclass=ABCMeta):
+class BaseWebElementHelper(FreshWebElement):
     """
     Base helper for PageElement property getter
     """
+    __metaclass__ = ABCMeta
 
     def __init__(self, webelement):
         """
