@@ -65,7 +65,7 @@ class WebstrModel(WebstrModelBase):
         Parameters:
             driver: webdriver instance
         """
-        super().__init__(driver)
+        super(WebstrModel, self).__init__(driver)
 
 
 class DynamicWebstrModel(WebstrModelBase):
@@ -88,7 +88,7 @@ class DynamicWebstrModel(WebstrModelBase):
             name: page model instance name; this name is used for identifying
                   single instance along others, e.g., single VM in the VM list
         """
-        super().__init__(driver)
+        super(DynamicWebstrModel, self).__init__(driver)
         self._name = name
 
     def __str__(self):
@@ -241,7 +241,7 @@ class PageElement(RootPageElement):
 
         Throws: ValueError - attempt for using a dynamic element as list
         """
-        super().__init__(by, locator)
+        super(PageElement, self).__init__(by, locator)
         if self._is_dynamic and as_list:
             raise ValueError("List of page elements cannot be set as dynamic.")
         self._as_list = as_list
@@ -317,7 +317,7 @@ class DynamicPageElement(PageElement):
             by: element locator type; see selenium.webdriver.common.by.By
             locator: element locator value
         """
-        super().__init__(by=by, locator=locator, as_list=False)
+        super(DynamicPageElement, self).__init__(by=by, locator=locator, as_list=False)
 
 
 class BaseWebElementHelper(FreshWebElement):

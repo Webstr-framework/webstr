@@ -156,7 +156,7 @@ class WebstrPage(WebstrPageBase):
                             "%s class is not subclass of WebstrModel"
                             % self._model.__name__)
         self._model = self._model(driver)
-        super().__init__(driver)
+        super(WebstrPage, self).__init__(driver)
 
 
 class DynamicWebstrPage(WebstrPageBase):
@@ -189,4 +189,4 @@ class DynamicWebstrPage(WebstrPageBase):
                             "%s class is not subclass of DynamicWebstrModel"
                             % self._model.__name__)
         self._model = self._model(driver, name)
-        super().__init__(driver)
+        super(DynamicWebstrPage, self).__init__(driver)

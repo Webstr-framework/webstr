@@ -28,7 +28,7 @@ class UITestCase(object):
                                AssertionError)
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+        super(UITestCase, self).__init__(**kwargs)
         self.driver = None
 
     def _start_browser(self):
