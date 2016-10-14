@@ -5,7 +5,7 @@ Selenium WebDriver instance manager.
 """
 
 from webstr.core import config
-from webstr.lib.selenium.webdriver import DriverFactory
+from webstr.selenium.webdriver import DriverFactory
 
 
 class Driver(object):

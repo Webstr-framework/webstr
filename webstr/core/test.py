@@ -8,8 +8,8 @@ import logging
 
 from selenium.common import exceptions as selenium_ex
 
-import webstr.lib.selenium.ui.exceptions as ui_exceptions
-from webstr.lib.driver import Driver
+import webstr.selenium.ui.exceptions as ui_exceptions
+from webstr.selenium.driver import Driver
 from webstr.core import config
 
 LOGGER = logging.getLogger(__name__)

@@ -7,7 +7,7 @@ Author: pnovotny
 from selenium.common import exceptions as selenium_ex
 
 from webstr.core import WebstrModel, DynamicWebstrModel
-from webstr.lib.selenium.ui import exceptions as ui_exceptions
+from webstr.selenium.ui import exceptions as ui_exceptions
 from webstr.common import timeouts
 
 

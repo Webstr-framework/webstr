@@ -4,7 +4,7 @@ Page elements for basic form widgets.
 Author: pnovotny
 """
 
-from webstr.lib.selenium.ui import forms
+from webstr.selenium.ui import forms
 from webstr.core import PageElement, BaseWebElementHelper
 
 

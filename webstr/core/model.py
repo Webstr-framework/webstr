@@ -6,7 +6,7 @@ Author: pnovotny, ltrilety
 
 from abc import ABCMeta, abstractproperty
 
-from webstr.lib.selenium.webelement import FreshWebElement
+from webstr.selenium.webelement import FreshWebElement
 
 
 class WebstrModelBase(object):

@@ -7,7 +7,7 @@ Author: pnovotny, ltrilety, mkudlej
 from webstr.core import WebstrPage
 from webstr.common import timeouts
 from webstr.common.models import dialogs as m_dialogs
-from webstr.lib.selenium.ui.support import WebDriverWait
+from webstr.selenium.ui.support import WebDriverWait
 
 
 class ModalDlg(WebstrPage):

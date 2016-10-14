@@ -10,7 +10,7 @@ import time
 from selenium.common import exceptions as selenium_ex
 from selenium.webdriver.support.ui import WebDriverWait as BaseWebDriverWait
 
-import webstr.lib.selenium.ui.exceptions as ui_exceptions
+import webstr.selenium.ui.exceptions as ui_exceptions
 
 
 LOGGER = logging.getLogger(__name__)

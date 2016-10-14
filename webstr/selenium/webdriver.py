@@ -17,7 +17,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.remote.remote_connection import RemoteConnection
 from selenium.common import exceptions as selenium_ex
 
-from webstr.lib.selenium.webelement import FreshWebElement
+from webstr.selenium.webelement import FreshWebElement
 from webstr.core import config
 
 
