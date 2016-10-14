@@ -5,8 +5,8 @@ Author: ltrilety
 """
 
 from webstr.core import WebstrPage
-from webstr.lib.selenium.ui.common import timeouts
-from webstr.lib.selenium.ui.common.models import actionpopups as m_actionpopups
+from webstr.common import timeouts
+from webstr.common.models import actionpopups as m_actionpopups
 
 
 class ActionPopupPanel(WebstrPage):

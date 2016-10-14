@@ -5,7 +5,7 @@ Author: pnovotny, ltrilety, mkudlej
 """
 
 from webstr.core import WebstrModel, PageElement, By, RootPageElement
-from webstr.lib.selenium.ui.common.models import form
+from webstr.common.models import form
 
 
 class ModalDlg(WebstrModel):

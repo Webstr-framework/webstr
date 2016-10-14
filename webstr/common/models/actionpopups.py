@@ -5,7 +5,7 @@ Author: ltrilety
 """
 
 from webstr.core import WebstrModel, RootPageElement, By
-from webstr.lib.selenium.ui.common.models import form
+from webstr.common.models import form
 
 
 class ActionPopupPanel(WebstrModel):

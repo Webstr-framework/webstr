@@ -5,7 +5,7 @@
 
 from webstr.core import WebstrPage, DynamicWebstrPage
 
-import webstr.lib.selenium.ui.common.models.containers as m_containers
+import webstr.common.models.containers as m_containers
 
 
 

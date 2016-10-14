@@ -8,7 +8,7 @@ from selenium.common import exceptions as selenium_ex
 
 from webstr.core import WebstrModel, DynamicWebstrModel
 from webstr.lib.selenium.ui import exceptions as ui_exceptions
-from webstr.lib.selenium.ui.common import timeouts
+from webstr.common import timeouts
 
 
 class WebstrPageBase(object):

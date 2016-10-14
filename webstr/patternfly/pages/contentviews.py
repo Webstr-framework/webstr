@@ -6,8 +6,8 @@ Page objects for patternfly Content Views:
 """
 
 from webstr.core import DynamicWebstrPage, WebstrPage
-from webstr.lib.selenium.ui.patternfly.models import contentviews as m_contentviews
-import webstr.lib.selenium.ui.common.pages.containers as containers
+from webstr.patternfly.models import contentviews as m_contentviews
+import webstr.common.pages.containers as containers
 
 
 class ListViewRow(containers.ContainerRowBase):
