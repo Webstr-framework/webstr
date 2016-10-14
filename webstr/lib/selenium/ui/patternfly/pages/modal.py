@@ -6,11 +6,11 @@ page, so that one needs to close it first to access the rest of the page again.
 """
 
 
-from webstr.core import PageObject
+from webstr.core import WebstrPage
 from webstr.lib.selenium.ui.patternfly.models import modal as m_modal
 
 
-class ModalWindow(PageObject):
+class ModalWindow(WebstrPage):
     """
     Base page object class for any modal window.
     """

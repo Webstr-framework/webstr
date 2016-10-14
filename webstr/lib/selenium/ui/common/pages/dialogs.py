@@ -4,13 +4,13 @@ Page objects for common dialogs.
 Author: pnovotny, ltrilety, mkudlej
 """
 
-from webstr.core import PageObject
+from webstr.core import WebstrPage
 from webstr.lib.selenium.ui.common import timeouts
 from webstr.lib.selenium.ui.common.models import dialogs as m_dialogs
 from webstr.lib.selenium.ui.support import WebDriverWait
 
 
-class ModalDlg(PageObject):
+class ModalDlg(WebstrPage):
     """
     Base new-style page object for all modal dialogs.
     """

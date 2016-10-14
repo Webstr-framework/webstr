@@ -4,7 +4,7 @@ Page objects for patternfly Tabs
 * https://www.patternfly.org/widgets/#tabs
 """
 
-from webstr.core import DynamicPageObject, PageObject
+from webstr.core import DynamicWebstrPage, WebstrPage
 from webstr.lib.selenium.ui.patternfly.models import tabs as m_tabs
 import webstr.lib.selenium.ui.common.pages.containers as containers
 

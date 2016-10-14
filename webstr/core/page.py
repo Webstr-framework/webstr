@@ -6,12 +6,12 @@ Author: pnovotny
 
 from selenium.common import exceptions as selenium_ex
 
-from webstr.core import PageModel, DynamicPageModel
+from webstr.core import WebstrModel, DynamicWebstrModel
 from webstr.lib.selenium.ui import exceptions as ui_exceptions
 from webstr.lib.selenium.ui.common import timeouts
 
 
-class PageObjectBase(object):
+class WebstrPageBase(object):
     """
     base class for page object.
 
@@ -139,7 +139,7 @@ class PageObjectBase(object):
             return None
 
 
-class PageObject(PageObjectBase):
+class WebstrPage(WebstrPageBase):
     """
     New-style static page object.
     """
@@ -151,22 +151,22 @@ class PageObject(PageObjectBase):
         Parameters:
             * driver - webdriver instance
         """
-        if not issubclass(self._model, PageModel):
+        if not issubclass(self._model, WebstrModel):
             raise TypeError("page model type mismatch: "
-                            "%s class is not subclass of PageModel"
+                            "%s class is not subclass of WebstrModel"
                             % self._model.__name__)
         self._model = self._model(driver)
         super().__init__(driver)
 
 
-class DynamicPageObject(PageObjectBase):
+class DynamicWebstrPage(WebstrPageBase):
     """
     New-style dynamic page object.
     All dynamic page object instances must specify its name, according to whose
     it's possible to identify it.
 
     Usage:
-      class VMInstance(DynamicPageObject):
+      class VMInstance(DynamicWebstrPage):
           ...
           ...
 
@@ -184,9 +184,9 @@ class DynamicPageObject(PageObjectBase):
         """
         self._name = name
         self._label = '%s %s' % (self._label, name)
-        if not issubclass(self._model, DynamicPageModel):
+        if not issubclass(self._model, DynamicWebstrModel):
             raise TypeError("page model type mismatch: "
-                            "%s class is not subclass of DynamicPageModel"
+                            "%s class is not subclass of DynamicWebstrModel"
                             % self._model.__name__)
         self._model = self._model(driver, name)
         super().__init__(driver)

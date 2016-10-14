@@ -5,17 +5,17 @@ https://www.patternfly.org/widgets/#dropdowns
 Author: ltrilety
 """
 
-from webstr.core import PageModel, DynamicPageModel, PageElement, By, RootPageElement, NameRootPageElement
+from webstr.core import WebstrModel, DynamicWebstrModel, PageElement, By, RootPageElement, NameRootPageElement
 
 
-class DropDownMenuRow(DynamicPageModel):
+class DropDownMenuRow(DynamicWebstrModel):
     """
     Base class model for drop down menu item.
     """
     _root = NameRootPageElement(by=By.XPATH, locator='./li//ul/li[%d]')
 
 
-class DropDownMenu(PageModel):
+class DropDownMenu(WebstrModel):
     """ Base page model for any active dropdown menu.
     NOTE for drop down menu on admin-users page for any user it can be iterated right away any <li> element is a row
          for tasks the iterable part is deeper in another <ul> element or them there's UpperDropDownMenu class

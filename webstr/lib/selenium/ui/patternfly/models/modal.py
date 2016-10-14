@@ -8,11 +8,11 @@ page, so that one needs to close it first to access the rest of the page again.
 
 from webstr.core import By
 from webstr.core import PageElement
-from webstr.core import PageModel
+from webstr.core import WebstrModel
 from webstr.core import RootPageElement
 
 
-class ModalWindow(PageModel):
+class ModalWindow(WebstrModel):
     """
     Base page model class for any modal window.
     """

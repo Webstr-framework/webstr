@@ -4,10 +4,10 @@ Page models for patternfly Tabs
 * https://www.patternfly.org/widgets/#tabs
 """
 
-from webstr.core import By, DynamicPageModel, PageElement, PageModel, RootPageElement, NameRootPageElement
+from webstr.core import By, DynamicWebstrModel, PageElement, WebstrModel, RootPageElement, NameRootPageElement
 
 
-class Tabs(PageModel):
+class Tabs(WebstrModel):
     """
     Tabs allow to display more pages at one place by changing tab.
 
@@ -21,7 +21,7 @@ class Tabs(PageModel):
       as_list=True)
 
 
-class Tab(DynamicPageModel):
+class Tab(DynamicWebstrModel):
     """
     Item/tab of a Tabs
     """

@@ -4,12 +4,12 @@ Page objects for common dialogs.
 Author: ltrilety
 """
 
-from webstr.core import PageObject
+from webstr.core import WebstrPage
 from webstr.lib.selenium.ui.common import timeouts
 from webstr.lib.selenium.ui.common.models import actionpopups as m_actionpopups
 
 
-class ActionPopupPanel(PageObject):
+class ActionPopupPanel(WebstrPage):
     """Base Action Pop Up Panel"""
     _model = m_actionpopups.ActionPopupPanel
     _timeout = timeouts.POPUP_WINDOW

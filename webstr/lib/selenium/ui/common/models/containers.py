@@ -1,10 +1,10 @@
 """
 """
 
-from webstr.core import PageModel, DynamicPageModel, By
+from webstr.core import WebstrModel, DynamicWebstrModel, By
 
 
-class ContainerBase(PageModel):
+class ContainerBase(WebstrModel):
     """
     Base class for any container like model, such as list, table, ...
 
@@ -14,7 +14,7 @@ class ContainerBase(PageModel):
     rows = None
 
 
-class ContainerRowBase(DynamicPageModel):
+class ContainerRowBase(DynamicWebstrModel):
     """
     Base class for a row in a container, such as item in a list, or a line in a table, ...
     """

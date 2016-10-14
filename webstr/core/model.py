@@ -9,7 +9,7 @@ from abc import ABCMeta, abstractproperty
 from webstr.lib.selenium.webelement import FreshWebElement
 
 
-class PageModelBase(object):
+class WebstrModelBase(object):
     """
     Base class for page models.
 
@@ -48,12 +48,12 @@ class PageModelBase(object):
         return str(self)
 
 
-class PageModel(PageModelBase):
+class WebstrModel(WebstrModelBase):
     """
     Basic (static) page model.
 
     It doesn't differ from its base class, but is defined separately
-    so we can distinguish it from the DynamicPageModel class.
+    so we can distinguish it from the DynamicWebstrModel class.
     Static page model contains only static page elements,
     i.e., :class:`PageElement` instances or its direct descendants.
     """
@@ -68,7 +68,7 @@ class PageModel(PageModelBase):
         super().__init__(driver)
 
 
-class DynamicPageModel(PageModelBase):
+class DynamicWebstrModel(WebstrModelBase):
     """
     Dynamic page model.
 
@@ -94,9 +94,9 @@ class DynamicPageModel(PageModelBase):
     def __str__(self):
         """ Return human readable page model representation. """
         return '%s "%s"' \
-               % (super(DynamicPageModel, self).__str__(), self._name)
+               % (super(DynamicWebstrModel, self).__str__(), self._name)
 
-    # we are using DynamicPageModel without any DynamicPageElement in it,
+    # we are using DynamicWebstrModel without any DynamicPageElement in it,
     # hence this method does not to be implemented at all
     # (the original design was that one have to implement this method in a subclass)
     # TODO: revisit this design change later after the current refactoring/cleanup
@@ -157,17 +157,17 @@ class RootPageElement(BasePageElement):
     and successors.
 
     Usage:
-      class LoginPageModel(PageModel):
+      class LoginWebstrModel(WebstrModel):
         _root = RootPageElement(by=By.ID, locator='LoginPopupView_loginForm')
     """
 
     def __get__(self, model_obj, objtype=None):
         """ Property getter method.
         The return value is what is returned,
-        when a <*PageModel> attribute is accessed.
+        when a <*WebstrModel> attribute is accessed.
 
         Parameters:
-            model_obj: <*PageModel> instance
+            model_obj: <*WebstrModel> instance
             objtype: type of the model_obj
 
         Returns:
@@ -185,17 +185,17 @@ class NameRootPageElement(BasePageElement):
     and successors.
 
     Usage:
-      class LoginPageModel(DynamicPageModel):
+      class LoginWebstrModel(DynamicWebstrModel):
         _root = NameRootPageElement(by=By.XPATH, locator='//table/tbody/td[%d]')
     """
 
     def __get__(self, model_obj, objtype=None):
         """ Property getter method.
         The return value is what is returned,
-        when a <*DynamicPageModel> attribute is accessed.
+        when a <*DynamicWebstrModel> attribute is accessed.
 
         Parameters:
-            model_obj: <*DynamicPageModel> instance
+            model_obj: <*DynamicWebstrModel> instance
             objtype: type of the model_obj
 
         Returns:
@@ -214,7 +214,7 @@ class PageElement(RootPageElement):
       class SelectBox(PageElement):
           _helper = selenium.webdriver.support.ui.Select
 
-      class LoginPageModel(PageModel):
+      class LoginWebstrModel(WebstrModel):
           username = PageElement(by=By.ID, locator='LoginPopupView_userName')
           domain = SelectBox(by=By.ID, locator='LoginPopupView_domain')
 
@@ -249,13 +249,13 @@ class PageElement(RootPageElement):
     def __get__(self, model_obj, objtype=None):
         """
         Property getter method.
-        The return value is what is returned, when a <*PageModel> attribute
+        The return value is what is returned, when a <*WebstrModel> attribute
         is accessed. If model instance has defined a root element
         (via `_root` attribute), all page elements are looked up
         relatively to the root element.
 
         Parameters:
-            model_obj: <*PageModel> instance
+            model_obj: <*WebstrModel> instance
             objtype: type of the model_obj
 
         Returns:
@@ -290,7 +290,7 @@ class DynamicPageElement(PageElement):
     for run-time interpolation using the '%s' formatter.
 
     Usage:
-      class VMInstanceModel(DynamicPageModel):
+      class VMInstanceModel(DynamicWebstrModel):
           name = DynamicPageElement(by=By.ID, locator='VMList_name_%s')
           status = DynamicPageElement(by=By.ID, locator='VMList_status_%s')
 

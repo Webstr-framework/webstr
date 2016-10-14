@@ -25,7 +25,7 @@ class GeneralException(Exception):
 
 class InitPageValidationError(GeneralException):
     """
-    Initial validation error upon PageObject creation.
+    Initial validation error upon WebstrPage creation.
     """
     message = "Initial page validation error"
 

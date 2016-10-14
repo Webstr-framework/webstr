@@ -3,7 +3,7 @@
 """
 
 
-from webstr.core import PageObject, DynamicPageObject
+from webstr.core import WebstrPage, DynamicWebstrPage
 
 import webstr.lib.selenium.ui.common.models.containers as m_containers
 
@@ -48,19 +48,19 @@ class ContainerIterator(object):
         return iter(range(1, len(row_element_list) + 1))
 
 
-class ContainerRowBase(DynamicPageObject):
+class ContainerRowBase(DynamicWebstrPage):
     """
     A single item or line.
     """
     _model = m_containers.ContainerRowBase
 
 
-class ContainerBase(PageObject):
+class ContainerBase(WebstrPage):
     """
     Table shown under *Status* tab on the Task detail page.
 
     Class attributes:
-        _model: related PageModel class
+        _model: related WebstrModel class
         _row_class: class representing single line or item
     """
     _model = m_containers.ContainerBase

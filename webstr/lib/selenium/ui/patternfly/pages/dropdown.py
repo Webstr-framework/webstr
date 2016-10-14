@@ -6,7 +6,7 @@ https://www.patternfly.org/widgets/#dropdowns
 Author: ltrilety
 """
 
-from webstr.core import PageObject
+from webstr.core import WebstrPage
 from webstr.lib.selenium.ui.patternfly.models import dropdown as m_dropdown
 import webstr.lib.selenium.ui.common.pages.containers as containers
 

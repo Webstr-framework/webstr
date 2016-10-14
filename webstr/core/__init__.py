@@ -6,8 +6,8 @@
 """
 
 from selenium.webdriver.common.by import By
-from webstr.core.pagemodel import(
-    PageModel, DynamicPageModel, BaseWebElementHelper,
+from webstr.core.model import(
+    WebstrModel, DynamicWebstrModel, BaseWebElementHelper,
     PageElement, DynamicPageElement, RootPageElement, NameRootPageElement
 ) # flake8: noqa
-from webstr.core.pageobject import(PageObject, DynamicPageObject)
+from webstr.core.page import(WebstrPage, DynamicWebstrPage)

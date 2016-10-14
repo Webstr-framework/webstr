@@ -5,7 +5,7 @@ Page objects for patternfly Content Views:
 * https://www.patternfly.org/patterns/table-view/
 """
 
-from webstr.core import DynamicPageObject, PageObject
+from webstr.core import DynamicWebstrPage, WebstrPage
 from webstr.lib.selenium.ui.patternfly.models import contentviews as m_contentviews
 import webstr.lib.selenium.ui.common.pages.containers as containers
 

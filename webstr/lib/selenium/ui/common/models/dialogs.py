@@ -4,11 +4,11 @@ Page models for common dialogs.
 Author: pnovotny, ltrilety, mkudlej
 """
 
-from webstr.core import PageModel, PageElement, By, RootPageElement
+from webstr.core import WebstrModel, PageElement, By, RootPageElement
 from webstr.lib.selenium.ui.common.models import form
 
 
-class ModalDlg(PageModel):
+class ModalDlg(WebstrModel):
     """ Base page model for modal dialogs. """
     background_veil = PageElement(By.CSS_SELECTOR, 'div.gwt-PopupPanelGlass')
 

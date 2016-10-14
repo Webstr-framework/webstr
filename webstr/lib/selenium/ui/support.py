@@ -66,16 +66,16 @@ class WebDriverWait(BaseWebDriverWait):
         super(WebDriverWait, self).__init__(driver, timeout, poll_frequency, **kwargs)
 
 
-class WaitForPageObject(object):
+class WaitForWebstrPage(object):
     """
     Wrapper around WebDriverWait providing helper methods for page objects.
 
     Usage::
         template = TemplateInstance(driver, name='test-tmpl')
 
-        WaitForPageObject(template, 60).to_disappear()
-        WaitForPageObject(template, 30).status('is_ok')
-        WaitForPageObject(template, 30).status_not('is_locked')
+        WaitForWebstrPage(template, 60).to_disappear()
+        WaitForWebstrPage(template, 30).status('is_ok')
+        WaitForWebstrPage(template, 30).status_not('is_locked')
         ...
     """
     __IGNORED_EXCEPTIONS = ui_exceptions.InitPageValidationError

@@ -5,10 +5,10 @@ Page models for patternfly Content Views:
 * https://www.patternfly.org/patterns/table-view/
 """
 
-from webstr.core import By, DynamicPageModel, PageElement, PageModel, RootPageElement, NameRootPageElement
+from webstr.core import By, DynamicWebstrModel, PageElement, WebstrModel, RootPageElement, NameRootPageElement
 
 
-class ListView(PageModel):
+class ListView(WebstrModel):
     """
     A List View displays data in rows. Each row displays the same set of
     attributes, although not necessarily displayed in columns, and the
@@ -27,7 +27,7 @@ class ListView(PageModel):
       as_list=True)
 
 
-class ListViewRow(DynamicPageModel):
+class ListViewRow(DynamicWebstrModel):
     """
     Item/row of a List View
     """
@@ -36,7 +36,7 @@ class ListViewRow(DynamicPageModel):
       locator='(' + ListView.LIST_XPATH + '//*[contains(concat(" ", @class, " "), " list-group-item ")])[%d]')
 
 
-class TableView(PageModel):
+class TableView(WebstrModel):
     """
     The table view organizes data into rows (of items) and columns (of item
     attributes).
