@@ -21,7 +21,7 @@ page, so that one needs to close it first to access the rest of the page again.
 
 
 from webstr.core import WebstrPage
-from webstr.patternfly.models import modal as m_modal
+from webstr.patternfly.modal import models as m_modal
 
 
 class ModalWindow(WebstrPage):

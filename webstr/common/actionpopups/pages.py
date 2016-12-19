@@ -21,7 +21,7 @@ Author: ltrilety
 
 from webstr.core import WebstrPage
 from webstr.common import timeouts
-from webstr.common.models import actionpopups as m_actionpopups
+from webstr.common.actionpopups import models as m_actionpopups
 
 
 class ActionPopupPanel(WebstrPage):

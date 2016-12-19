@@ -20,8 +20,8 @@ Page objects for patternfly Tabs
 
 
 from webstr.core import DynamicWebstrPage, WebstrPage
-from webstr.patternfly.models import tabs as m_tabs
-import webstr.common.pages.containers as containers
+from webstr.patternfly.tabs import models as m_tabs
+import webstr.common.containers.pages as containers
 
 
 class Tab(containers.ContainerRowBase):

@@ -20,7 +20,7 @@ Author: ltrilety
 
 
 from webstr.core import WebstrModel, RootPageElement, By
-from webstr.common.models import form
+from webstr.common.form import models
 
 
 class ActionPopupPanel(WebstrModel):

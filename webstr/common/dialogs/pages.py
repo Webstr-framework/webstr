@@ -21,7 +21,7 @@ Author: pnovotny, ltrilety, mkudlej
 
 from webstr.core import WebstrPage
 from webstr.common import timeouts
-from webstr.common.models import dialogs as m_dialogs
+from webstr.common.dialogs import models as m_dialogs
 from webstr.selenium.ui.support import WebDriverWait
 
 

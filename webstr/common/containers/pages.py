@@ -19,7 +19,7 @@
 
 from webstr.core import WebstrPage, DynamicWebstrPage
 
-import webstr.common.models.containers as m_containers
+import webstr.common.containers.models as m_containers
 
 
 

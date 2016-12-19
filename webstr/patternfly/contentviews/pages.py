@@ -21,8 +21,8 @@ Page objects for patternfly Content Views:
 
 
 from webstr.core import DynamicWebstrPage, WebstrPage
-from webstr.patternfly.models import contentviews as m_contentviews
-import webstr.common.pages.containers as containers
+from webstr.patternfly.contentviews import models as m_contentviews
+import webstr.common.containers.pages as containers
 
 
 class ListViewRow(containers.ContainerRowBase):

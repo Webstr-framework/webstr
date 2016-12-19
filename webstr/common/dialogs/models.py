@@ -20,7 +20,7 @@ Author: pnovotny, ltrilety, mkudlej
 
 
 from webstr.core import WebstrModel, PageElement, By, RootPageElement
-from webstr.common.models import form
+from webstr.common.form import models
 
 
 class ModalDlg(WebstrModel):

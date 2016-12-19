@@ -22,8 +22,8 @@ Author: ltrilety
 
 
 from webstr.core import WebstrPage
-from webstr.patternfly.models import dropdown as m_dropdown
-import webstr.common.pages.containers as containers
+from webstr.patternfly.dropdown import models as m_dropdown
+import webstr.common.containers.pages as containers
 
 
 class DropDownMenuRow(containers.ContainerRowBase):
