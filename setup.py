@@ -27,7 +27,7 @@ setup(
     url='TODO',
     author='TODO',
     author_email='TODO',
-    license='TODO',
+    license='Apache 2.0',
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 3 - Alpha',
