@@ -46,12 +46,12 @@ class OkCancelDlg(ModalDlg):
 
 class RemoveConfirmDlg(OkCancelDlg):
     """ Page model for common removal confirmation dialog. """
-    ok_btn = form.Button(By.XPATH, '//div[@id="RemoveConfirmationPopupView_OnRemove"]')
-    cancel_btn = form.Button(By.XPATH, '//div[@id="RemoveConfirmationPopupView_Cancel"]')
+    ok_btn = models.Button(By.XPATH, '//div[@id="RemoveConfirmationPopupView_OnRemove"]')
+    cancel_btn = models.Button(By.XPATH, '//div[@id="RemoveConfirmationPopupView_Cancel"]')
 
 
 class ErrorDialog(CloseDlg):
     """ dialog with error message model """
     _root = RootPageElement(by=By.XPATH, locator='//div[@class="gwt-DialogBox dialogBoxStyle"]')
-    close_btn = form.Button(By.XPATH, '//div[@role="button"][contains(., "Close")]')
+    close_btn = models.Button(By.XPATH, '//div[@role="button"][contains(., "Close")]')
     error = PageElement(By.XPATH, '//div[@class="gwt-HTML"]')

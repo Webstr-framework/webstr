@@ -27,5 +27,5 @@ class ActionPopupPanel(WebstrModel):
     """ Base Action Pop Up Panel model """
     _root = RootPageElement(By.CLASS_NAME, "actionPanelPopupPanel")
 
-    status_btn = form.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Status")]')
-    stop_btn = form.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Stop")]')
+    status_btn = models.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Status")]')
+    stop_btn = models.Button(By.XPATH, '//div[@class="actionPanelPopupPanel"]//td[contains(text(), "Stop")]')
