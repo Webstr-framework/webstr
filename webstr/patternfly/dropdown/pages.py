@@ -30,18 +30,18 @@ class DropDownMenuRow(containers.ContainerRowBase):
     """
     Base class for drop down menu item.
     """
-    _model = m_dropdown.DropDownMenuRow
+    _model = m_dropdown.DropDownMenuRowModel
 
 
 class DropDownMenu(containers.ContainerBase):
     """
     Base page object for any active dropdown menu.
     """
-    _model = m_dropdown.DropDownMenu
+    _model = m_dropdown.DropDownMenuModel
     _row_class = DropDownMenuRow
     _required_elems = ['_root']
 
 
 class UpperDropDownMenu(DropDownMenu):
     """ Page object for dropdowns menu presented in upper menu """
-    _model = m_dropdown.UpperDropDownMenu
+    _model = m_dropdown.UpperDropDownMenuModel

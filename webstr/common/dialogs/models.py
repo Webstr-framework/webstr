@@ -23,12 +23,12 @@ from webstr.core import WebstrModel, PageElement, By, RootPageElement
 from webstr.common.form import models
 
 
-class ModalDlg(WebstrModel):
+class ModalDlgModel(WebstrModel):
     """ Base page model for modal dialogs. """
     background_veil = PageElement(By.CSS_SELECTOR, 'div.gwt-PopupPanelGlass')
 
 
-class CloseDlg(ModalDlg):
+class CloseDlgModel(ModalDlgModel):
     """
     Base page model for dialog window containing 'Close' button.
     This is only a place holder class! Required page elements
@@ -36,7 +36,7 @@ class CloseDlg(ModalDlg):
     """
 
 
-class OkCancelDlg(ModalDlg):
+class OkCancelDlgModel(ModalDlgModel):
     """
     Base page model for dialog window containing 'OK' and 'Cancel' buttons.
     This is only a place holder class! Required page elements
@@ -44,13 +44,13 @@ class OkCancelDlg(ModalDlg):
     """
 
 
-class RemoveConfirmDlg(OkCancelDlg):
+class RemoveConfirmDlgModel(OkCancelDlgModel):
     """ Page model for common removal confirmation dialog. """
     ok_btn = models.Button(By.XPATH, '//div[@id="RemoveConfirmationPopupView_OnRemove"]')
     cancel_btn = models.Button(By.XPATH, '//div[@id="RemoveConfirmationPopupView_Cancel"]')
 
 
-class ErrorDialog(CloseDlg):
+class ErrorDialogModel(CloseDlgModel):
     """ dialog with error message model """
     _root = RootPageElement(by=By.XPATH, locator='//div[@class="gwt-DialogBox dialogBoxStyle"]')
     close_btn = models.Button(By.XPATH, '//div[@role="button"][contains(., "Close")]')

@@ -23,7 +23,7 @@ Page models for patternfly Content Views:
 from webstr.core import By, DynamicWebstrModel, PageElement, WebstrModel, RootPageElement, NameRootPageElement
 
 
-class ListView(WebstrModel):
+class ListViewModel(WebstrModel):
     """
     A List View displays data in rows. Each row displays the same set of
     attributes, although not necessarily displayed in columns, and the
@@ -42,16 +42,16 @@ class ListView(WebstrModel):
       as_list=True)
 
 
-class ListViewRow(DynamicWebstrModel):
+class ListViewRowModel(DynamicWebstrModel):
     """
     Item/row of a List View
     """
     _root = NameRootPageElement(
       by=By.XPATH,
-      locator='(' + ListView.LIST_XPATH + '//*[contains(concat(" ", @class, " "), " list-group-item ")])[%d]')
+      locator='(' + ListViewModel.LIST_XPATH + '//*[contains(concat(" ", @class, " "), " list-group-item ")])[%d]')
 
 
-class TableView(WebstrModel):
+class TableViewModel(WebstrModel):
     """
     The table view organizes data into rows (of items) and columns (of item
     attributes).

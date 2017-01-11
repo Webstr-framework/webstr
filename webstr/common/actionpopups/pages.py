@@ -26,7 +26,7 @@ from webstr.common.actionpopups import models as m_actionpopups
 
 class ActionPopupPanel(WebstrPage):
     """Base Action Pop Up Panel"""
-    _model = m_actionpopups.ActionPopupPanel
+    _model = m_actionpopups.ActionPopupPanelModel
     _timeout = timeouts.POPUP_WINDOW
     _reqired_elems = ['status_btn', 'stop_btn']
 

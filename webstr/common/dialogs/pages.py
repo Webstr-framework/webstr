@@ -30,7 +30,7 @@ class ModalDlg(WebstrPage):
     Base new-style page object for all modal dialogs.
     """
     _timeout = timeouts.MODAL_DIALOG
-    _model = m_dialogs.ModalDlg
+    _model = m_dialogs.ModalDlgModel
 
     def wait_to_disappear(self, timeout=timeouts.MODAL_DIALOG_CLOSE):
         """
@@ -54,7 +54,7 @@ class CloseDlg(ModalDlg):
     for the OK & Cancel buttons. The button page elements must be defined
     in particular page model of the derived page object class.
     """
-    _model = m_dialogs.CloseDlg
+    _model = m_dialogs.CloseDlgModel
     _label = 'OK/Cancel dialog'
     _required_elems = ['close_btn']
 
@@ -91,7 +91,7 @@ class OkCancelDlg(ModalDlg):
     for the OK & Cancel buttons. The button page elements must be defined
     in particular page model of the derived page object class.
     """
-    _model = m_dialogs.OkCancelDlg
+    _model = m_dialogs.OkCancelDlgModel
     _label = 'OK/Cancel dialog'
     _required_elems = ['ok_btn', 'cancel_btn']
 
@@ -130,12 +130,12 @@ class OkCancelDlg(ModalDlg):
 
 class RemoveConfirmDlg(OkCancelDlg):
     """New-style page object for removal confirmation dialogs."""
-    _model = m_dialogs.RemoveConfirmDlg
+    _model = m_dialogs.RemoveConfirmDlgModel
 
 
 class ErrorDialog(CloseDlg):
     """Profiling pop up menu"""
-    _model = m_dialogs.ErrorDialog
+    _model = m_dialogs.ErrorDialogModel
     _label = "Error dialog"
 
     @property

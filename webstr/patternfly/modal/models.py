@@ -26,7 +26,7 @@ from webstr.core import WebstrModel
 from webstr.core import RootPageElement
 
 
-class ModalWindow(WebstrModel):
+class ModalWindowModel(WebstrModel):
     """
     Base page model class for any modal window.
     """

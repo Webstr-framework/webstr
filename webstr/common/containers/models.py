@@ -19,7 +19,7 @@
 from webstr.core import WebstrModel, DynamicWebstrModel, By
 
 
-class ContainerBase(WebstrModel):
+class ContainerBaseModel(WebstrModel):
     """
     Base class for any container like model, such as list, table, ...
 
@@ -29,7 +29,7 @@ class ContainerBase(WebstrModel):
     rows = None
 
 
-class ContainerRowBase(DynamicWebstrModel):
+class ContainerRowBaseModel(DynamicWebstrModel):
     """
     Base class for a row in a container, such as item in a list, or a line in a table, ...
     """

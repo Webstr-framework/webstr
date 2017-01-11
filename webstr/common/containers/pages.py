@@ -66,7 +66,7 @@ class ContainerRowBase(DynamicWebstrPage):
     """
     A single item or line.
     """
-    _model = m_containers.ContainerRowBase
+    _model = m_containers.ContainerRowBaseModel
 
 
 class ContainerBase(WebstrPage):
@@ -77,7 +77,7 @@ class ContainerBase(WebstrPage):
         _model: related WebstrModel class
         _row_class: class representing single line or item
     """
-    _model = m_containers.ContainerBase
+    _model = m_containers.ContainerBaseModel
     _row_class = ContainerRowBase
     _iter_class = ContainerIterator
 

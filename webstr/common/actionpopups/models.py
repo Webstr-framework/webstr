@@ -23,7 +23,7 @@ from webstr.core import WebstrModel, RootPageElement, By
 from webstr.common.form import models
 
 
-class ActionPopupPanel(WebstrModel):
+class ActionPopupPanelModel(WebstrModel):
     """ Base Action Pop Up Panel model """
     _root = RootPageElement(By.CLASS_NAME, "actionPanelPopupPanel")
 

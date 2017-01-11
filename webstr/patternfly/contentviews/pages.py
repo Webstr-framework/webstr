@@ -29,7 +29,7 @@ class ListViewRow(containers.ContainerRowBase):
     """
     Item of a List View.
     """
-    _model = m_contentviews.ListViewRow
+    _model = m_contentviews.ListViewRowModel
     _label = 'ListView row'
     _required_elems = ['_root']
 
@@ -38,7 +38,7 @@ class ListView(containers.ContainerBase):
     """
     See: https://www.patternfly.org/list-view/
     """
-    _model = m_contentviews.ListView
+    _model = m_contentviews.ListViewModel
     _row_class = ListViewRow
     _required_elems = ['_root']
 
@@ -47,6 +47,6 @@ class TableView(containers.ContainerBase):
     """
     See: https://www.patternfly.org/patterns/table-view/
     """
-    _model = m_contentviews.TableView
+    _model = m_contentviews.TableViewModel
 
     # TODO

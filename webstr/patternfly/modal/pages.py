@@ -28,7 +28,7 @@ class ModalWindow(WebstrPage):
     """
     Base page object class for any modal window.
     """
-    _model = m_modal.ModalWindow
+    _model = m_modal.ModalWindowModel
     _required_elems = ['header', 'body', 'footer', 'title', 'close_btn']
 
     def close(self):

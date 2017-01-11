@@ -28,7 +28,7 @@ class Tab(containers.ContainerRowBase):
     """
     Item of Tabs.
     """
-    _model = m_tabs.Tab
+    _model = m_tabs.TabModel
     _label = 'Tab'
     _required_elems = ['_root']
 
@@ -42,6 +42,6 @@ class Tabs(containers.ContainerBase):
     """
     See: https://www.patternfly.org/widgets/#tabs
     """
-    _model = m_tabs.Tabs
+    _model = m_tabs.TabsModel
     _row_class = Tab
     _required_elems = ['_root']
