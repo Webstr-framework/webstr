@@ -35,7 +35,7 @@ class DropDownMenuModel(WebstrModel):
     NOTE for drop down menu on admin-users page for any user it can be iterated right away any <li> element is a row
          for tasks the iterable part is deeper in another <ul> element or them there's UpperDropDownMenu class
     """
-    _base_locator = '//*[contains(@class, "dropdown-menu")][contains(@class, "ng-scope")]/..'
+    _base_locator = '//*[contains(@class, "dropdown-menu")]/..'
     _root = RootPageElement(by=By.XPATH, locator=_base_locator + '/ul[./li]')
     rows = PageElement(By.XPATH, './li', as_list=True)
 
