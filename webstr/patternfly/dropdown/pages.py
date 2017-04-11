@@ -40,8 +40,3 @@ class DropDownMenu(containers.ContainerBase):
     _model = m_dropdown.DropDownMenuModel
     _row_class = DropDownMenuRow
     _required_elems = ['_root']
-
-
-class UpperDropDownMenu(DropDownMenu):
-    """ Page object for dropdowns menu presented in upper menu """
-    _model = m_dropdown.UpperDropDownMenuModel

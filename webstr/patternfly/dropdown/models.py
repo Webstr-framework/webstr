@@ -38,10 +38,3 @@ class DropDownMenuModel(WebstrModel):
     _base_locator = '//*[contains(@class, "dropdown-menu")]/..'
     _root = RootPageElement(by=By.XPATH, locator=_base_locator + '/ul[./li]')
     rows = PageElement(By.XPATH, './li', as_list=True)
-
-# TODO: consider UpperDropDownMenuRowModel (including related page class)
-
-class UpperDropDownMenuModel(DropDownMenuModel):
-    """ Page model for dropdowns menu presented in upper menu """
-    _root = RootPageElement(by=By.XPATH, locator=DropDownMenuModel._base_locator + '/ul[./li//ul]')
-    rows = PageElement(By.XPATH, './li//ul/li', as_list=True)
