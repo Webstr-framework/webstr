@@ -21,7 +21,7 @@ with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='webstr',
     # See https://packaging.python.org/en/latest/single_source_version.html
-    version='0.0.2.dev1',
+    version='0.0.3.dev1',
     description='Web testing framework based on Selenium.',
     long_description=long_description,
     url='TODO',
