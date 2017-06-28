@@ -253,12 +253,8 @@ class PageElement(RootPageElement):
             by: element locator type; see selenium.webdriver.common.by.By
             locator: element locator value
             as_list: bool; return single page element or a list of element(s)
-
-        Throws: ValueError - attempt for using a dynamic element as list
         """
         super(PageElement, self).__init__(by, locator)
-        if self._is_dynamic and as_list:
-            raise ValueError("List of page elements cannot be set as dynamic.")
         self._as_list = as_list
 
     def __get__(self, model_obj, objtype=None):
@@ -322,17 +318,6 @@ class DynamicPageElement(PageElement):
                      and needs to be interpolated? true in this case
     """
     _is_dynamic = True
-
-    def __init__(self, by, locator):
-        """
-        Note that with dynamic page element you cannot return list of elements
-        using the `as_list` argument as with static page element.
-
-        Parameters:
-            by: element locator type; see selenium.webdriver.common.by.By
-            locator: element locator value
-        """
-        super(DynamicPageElement, self).__init__(by=by, locator=locator, as_list=False)
 
 
 class BaseWebElementHelper(FreshWebElement):
