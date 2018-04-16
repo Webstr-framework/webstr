@@ -59,4 +59,18 @@ class TableViewModel(WebstrModel):
     See: https://www.patternfly.org/patterns/table-view/
     """
 
-    # TODO
+    TABLE_XPATH = '//table[contains(concat(" ", @class, " "), " table ")]'
+    _root = RootPageElement(By.XPATH, TABLE_XPATH)
+    rows = PageElement(
+      by=By.XPATH,
+      locator=TABLE_XPATH + "//tr",
+      as_list=True)
+
+
+class TableViewRowModel(DynamicWebstrModel):
+    """
+    Item/row of a Table View
+    """
+    _root = NameRootPageElement(
+      by=By.XPATH,
+      locator='(' + TableViewModel.TABLE_XPATH + '//tr[%d]')
