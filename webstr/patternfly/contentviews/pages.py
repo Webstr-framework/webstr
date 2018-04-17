@@ -43,10 +43,19 @@ class ListView(containers.ContainerBase):
     _required_elems = ['_root']
 
 
+class TableViewRow(containers.ContainerRowBase):
+    """
+    Item of a Table View.
+    """
+    _model = m_contentviews.TableViewRowModel
+    _label = 'TableView row'
+    _required_elems = ['_root']
+
+
 class TableView(containers.ContainerBase):
     """
     See: https://www.patternfly.org/patterns/table-view/
     """
     _model = m_contentviews.TableViewModel
-
-    # TODO
+    _row_class = TableViewRow
+    _required_elems = ['_root']
