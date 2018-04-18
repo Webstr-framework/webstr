@@ -73,4 +73,4 @@ class TableViewRowModel(DynamicWebstrModel):
     """
     _root = NameRootPageElement(
       by=By.XPATH,
-      locator='(' + TableViewModel.TABLE_XPATH + '/tbody//tr[@role="row"][%d]')
+      locator=TableViewModel.TABLE_XPATH + '/tbody//tr[@role="row"][%d]')
